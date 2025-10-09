@@ -1,14 +1,17 @@
-/* Reset */
-body, html {
+@charset "UTF-8";
+* {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", sans-serif;
-  scroll-behavior: smooth;
-  background-color: #f9f9f9;
-  color: #222;
+  box-sizing: border-box;
 }
 
-/* Layout */
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #f9fafb, #eef2ff);
+  color: #111827;
+  line-height: 1.6;
+}
+
 .strona {
   display: flex;
   flex-direction: column;
@@ -16,70 +19,116 @@ body, html {
 }
 
 .naglowek {
-  background-color: #1e1e2f;
-  color: white;
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
   padding: 1.5rem 2rem;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  top: 0;
+  z-index: 10;
 }
-
-.tytul {
-  margin: 0;
-  font-size: 2.5rem;
+.naglowek .tytul {
+  font-size: 1.8rem;
+  font-weight: 700;
 }
-
-.nawigacja {
-  margin-top: 1rem;
+.naglowek .nawigacja {
+  display: flex;
+  gap: 1.5rem;
 }
-
-.nawigacja a {
-  color: #e0e0e0;
-  margin: 0 1rem;
+.naglowek .nawigacja a {
+  color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.naglowek .nawigacja a:hover {
+  color: #111827;
+  background: white;
+  border-radius: 0.5rem;
 }
 
-.nawigacja a:hover {
-  color: #ffa500;
-}
-
-/* Sekcje */
 .glowna-sekcja {
-  padding: 2rem;
   flex: 1;
+  padding: 3rem 10%;
 }
 
 .sekcja {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
-
 .sekcja h2 {
-  color: #1e1e2f;
-  border-bottom: 2px solid #ffa500;
-  padding-bottom: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #4f46e5;
+  position: relative;
+}
+.sekcja h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #06b6d4;
+  border-radius: 2px;
+}
+.sekcja p, .sekcja li {
+  color: #6b7280;
+  font-size: 1rem;
+}
+.sekcja ul {
+  list-style: none;
+}
+.sekcja ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.sekcja ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #4f46e5;
+  font-weight: bold;
 }
 
 .projekt {
-  margin-top: 1rem;
-  padding: 1rem;
-  border-left: 4px solid #ffa500;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.projekt h3 {
+  margin-bottom: 0.5rem;
+  color: #06b6d4;
+}
+.projekt:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Kontakt */
+.kontakt {
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  padding: 2rem;
+  border-radius: 1rem;
+  color: white;
+}
 .kontakt a {
-  color: #0073e6;
-  text-decoration: none;
-}
-
-.kontakt a:hover {
+  color: white;
+  font-weight: 500;
   text-decoration: underline;
 }
+.kontakt a:hover {
+  color: #111827;
+}
 
-/* Stopka */
 .stopka {
-  background-color: #1e1e2f;
-  color: white;
   text-align: center;
   padding: 1rem;
+  background: #111827;
+  color: #f9fafb;
+  font-size: 0.9rem;
 }/*# sourceMappingURL=index.css.map */
