@@ -5,12 +5,10 @@ $dark: #111827;
 $light: #f9fafb;
 $gray: #6b7280;
 
-// Miksin do cienia
 @mixin card-shadow {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-// Reset stylów
 * {
   margin: 0;
   padding: 0;
@@ -24,14 +22,12 @@ body {
   line-height: 1.6;
 }
 
-// Layout
 .strona {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-// Nagłówek
 .naglowek {
   background: linear-gradient(90deg, $primary, $secondary);
   padding: 1.5rem 2rem;
@@ -66,7 +62,6 @@ body {
   }
 }
 
-// Sekcje
 .glowna-sekcja {
   flex: 1;
   padding: 3rem 10%;
@@ -118,7 +113,6 @@ body {
   }
 }
 
-// Projekty
 .projekt {
   background: white;
   padding: 1.5rem;
@@ -138,8 +132,11 @@ body {
   }
 }
 
-// Kontakt
 .kontakt {
+
+    h2{
+        color: white;
+    }
   background: linear-gradient(135deg, $primary, $secondary);
   padding: 2rem;
   border-radius: 1rem;
@@ -156,7 +153,8 @@ body {
   }
 }
 
-// Stopka
+
+
 .stopka {
   text-align: center;
   padding: 1rem;

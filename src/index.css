@@ -116,6 +116,9 @@ body {
   border-radius: 1rem;
   color: white;
 }
+.kontakt h2 {
+  color: white;
+}
 .kontakt a {
   color: white;
   font-weight: 500;
