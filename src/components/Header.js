@@ -17,7 +17,7 @@ function Header() {
                 <h1 className="tytul">Tomasz — Portfolio</h1>
                     
                         <nav className='nawigacja'>
-                            <Link to="/">Główna</Link>
+                            <Link to="/portfolio">Główna</Link>
                             <Link to="/omnie">O Mnie</Link>
                             <Link to="/hobby">Hobby</Link>
                             <Link to="/umiejetnosci">Umiejętności techniczne</Link>

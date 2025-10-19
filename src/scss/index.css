@@ -1,4 +1,110 @@
 @charset "UTF-8";
+.powitanie {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: #f9fafb;
+  position: relative;
+  overflow: hidden;
+}
+.powitanie::before, .powitanie::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+.powitanie::before {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  left: -150px;
+}
+.powitanie::after {
+  width: 500px;
+  height: 500px;
+  bottom: -150px;
+  right: -150px;
+}
+.powitanie__content {
+  max-width: 800px;
+  z-index: 2;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.powitanie__tytul {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+.powitanie__tytul .imie {
+  color: #06b6d4;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+}
+.powitanie__podtytul {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  opacity: 0.9;
+}
+.powitanie__opis {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #f9fafb;
+  opacity: 0.95;
+  margin-bottom: 2rem;
+}
+.powitanie .btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.7rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+.powitanie .btn--primary {
+  background: #f9fafb;
+  color: #4f46e5;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+.powitanie .btn--primary:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+.powitanie .btn--secondary {
+  border: 2px solid #f9fafb;
+  color: #f9fafb;
+  background: transparent;
+}
+.powitanie .btn--secondary:hover {
+  background: #f9fafb;
+  color: #4f46e5;
+  transform: translateY(-3px);
+}
+@media (max-width: 768px) {
+  .powitanie__tytul {
+    font-size: 2.2rem;
+  }
+  .powitanie__podtytul {
+    font-size: 1.2rem;
+  }
+  .powitanie__opis {
+    font-size: 0.95rem;
+  }
+}
+
 .kontakt {
   padding: 2rem;
   border-radius: 1rem;
@@ -48,6 +154,7 @@
 .naglowek .nawigacja {
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 .naglowek .nawigacja a {
   color: white;

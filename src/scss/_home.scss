@@ -1,0 +1,122 @@
+
+.powitanie {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, $primary, $secondary);
+  color: $light;
+  position: relative;
+  overflow: hidden;
+
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+  }
+
+  &::before {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    left: -150px;
+  }
+
+  &::after {
+    width: 500px;
+    height: 500px;
+    bottom: -150px;
+    right: -150px;
+  }
+
+  &__content {
+    max-width: 800px;
+    z-index: 2;
+    @include card-shadow;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+  }
+
+  &__tytul {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+
+    .imie {
+      color: $secondary;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &__podtytul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+    opacity: 0.9;
+  }
+
+  &__opis {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: $light;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.7rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 0 0.5rem;
+    cursor: pointer;
+
+    &--primary {
+      background: $light;
+      color: $primary;
+      @include card-shadow;
+
+      &:hover {
+        background: lighten($light, 5%);
+        transform: translateY(-3px);
+      }
+    }
+
+    &--secondary {
+      border: 2px solid $light;
+      color: $light;
+      background: transparent;
+
+      &:hover {
+        background: $light;
+        color: $primary;
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    &__tytul {
+      font-size: 2.2rem;
+    }
+    &__podtytul {
+      font-size: 1.2rem;
+    }
+    &__opis {
+      font-size: 0.95rem;
+    }
+  }
+}
