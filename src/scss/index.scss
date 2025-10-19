@@ -1,0 +1,39 @@
+@import "_variables";
+@import "_kontakt";
+@import "_stopka";
+@import "_naglowek";
+@import "_sekcja";
+@import "_projekt";
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, $light, #eef2ff);
+  color: $dark;
+  line-height: 1.6;
+}
+
+.strona {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+

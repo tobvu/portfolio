@@ -1,0 +1,33 @@
+.naglowek {
+  background: linear-gradient(90deg, $primary, $secondary);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  top: 0;
+  z-index: 10;
+
+  .tytul {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .nawigacja {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $dark;
+        background: white;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}

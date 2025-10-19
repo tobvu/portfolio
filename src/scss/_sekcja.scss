@@ -1,0 +1,50 @@
+.sekcja {
+  margin-bottom: 4rem;
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: $primary;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: $secondary;
+      border-radius: 2px;
+    }
+  }
+
+  p, li {
+    color: $gray;
+    font-size: 1rem;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+
+      &::before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: $primary;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.glowna-sekcja {
+  flex: 1;
+  padding: 3rem 10%;
+}

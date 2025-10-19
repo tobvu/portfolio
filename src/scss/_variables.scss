@@ -1,0 +1,9 @@
+$primary: #4f46e5;
+$secondary: #06b6d4;
+$dark: #111827;
+$light: #f9fafb;
+$gray: #6b7280;
+
+@mixin card-shadow {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
